@@ -105,7 +105,10 @@ def rectangle_prism_volume(width, length, height)
       print volume
 rectangle_prism_volume(input(), input(), input()) 
 
-
+def rectangle_prism_volume(height) #คำนวณแบบเรียกฟังก์ชั่น
+      volume = rectangle_area(input(), input())*height
+      print volume
+rectangle_prism_volume(input())
 
 
 
