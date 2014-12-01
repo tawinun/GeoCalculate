@@ -55,10 +55,10 @@ def triangle_area(): #calculate triangle area พื้นที่สามเ�
        for field in fields:
           row = Frame(NewWin_square)
           lab = Label(row, width=22, text=field+": ", anchor='w')
-          ent = Entry(row)
+          ent = Entry(row , justify='center')
           ent.insert(0,"0")
-          row.pack(side=TOP, fill=X, padx=5, pady=5)
-          lab.pack(side=LEFT)
+          row.pack(side=TOP, fill=X, padx=5, pady=5) # คำอธิบายหัวเรื่อง
+          lab.pack(side=TOP) # ช่องที่ให้ใส่เลข
           ent.pack(side=RIGHT, expand=YES, fill=X)
           entries[field] = ent
        return entries
@@ -88,10 +88,10 @@ def equilateral_triangle_area(): #calculate equilateral triangle area สาม�
        for field in fields:
           row = Frame(NewWin_rectangle)
           lab = Label(row, width=22, text=field+": ", anchor='w')
-          ent = Entry(row)
+          ent = Entry(row , justify='center')
           ent.insert(0,"0")
-          row.pack(side=TOP, fill=X, padx=5, pady=5)
-          lab.pack(side=LEFT)
+          row.pack(side=TOP, fill=X, padx=5, pady=5) # คำอธิบายหัวเรื่อง
+          lab.pack(side=TOP) # ช่องที่ให้ใส่เลข
           ent.pack(side=RIGHT, expand=YES, fill=X)
           entries[field] = ent
        return entries
@@ -122,10 +122,10 @@ def rightangled_triangle_area(): #calculate rightangled triangle area สาม�
        for field in fields:
           row = Frame(NewWin_paralellogram)
           lab = Label(row, width=22, text=field+": ", anchor='w')
-          ent = Entry(row)
+          ent = Entry(row , justify='center')
           ent.insert(0,"0")
-          row.pack(side=TOP, fill=X, padx=5, pady=5)
-          lab.pack(side=LEFT)
+          row.pack(side=TOP, fill=X, padx=5, pady=5) # คำอธิบายหัวเรื่อง
+          lab.pack(side=TOP) # ช่องที่ให้ใส่เลข
           ent.pack(side=RIGHT, expand=YES, fill=X)
           entries[field] = ent
        return entries
@@ -156,10 +156,10 @@ def rhombus_area():   #calculate rhombus area สี่เหลี่ยมเ�
        for field in fields:
           row = Frame(NewWin_rhombus)
           lab = Label(row, width=22, text=field+": ", anchor='w')
-          ent = Entry(row)
+          ent = Entry(row , justify='center')
           ent.insert(0,"0")
-          row.pack(side=TOP, fill=X, padx=5, pady=5)
-          lab.pack(side=LEFT)
+          row.pack(side=TOP, fill=X, padx=5, pady=5) # คำอธิบายหัวเรื่อง
+          lab.pack(side=TOP) # ช่องที่ให้ใส่เลข
           ent.pack(side=RIGHT, expand=YES, fill=X)
           entries[field] = ent
        return entries
@@ -192,10 +192,10 @@ def trapezium_area():   #calculate trapezium area คางหมู
        for field in fields:
           row = Frame(NewWin_trapezium)
           lab = Label(row, width=22, text=field+": ", anchor='w')
-          ent = Entry(row)
+          ent = Entry(row , justify='center')
           ent.insert(0,"0")
-          row.pack(side=TOP, fill=X, padx=5, pady=5)
-          lab.pack(side=LEFT)
+          row.pack(side=TOP, fill=X, padx=5, pady=5) # คำอธิบายหัวเรื่อง
+          lab.pack(side=TOP) # ช่องที่ให้ใส่เลข
           ent.pack(side=RIGHT, expand=YES, fill=X)
           entries[field] = ent
        return entries
@@ -252,10 +252,10 @@ def square_area():  #calculate square area สี่เหลี่ยมด้�
        for field in fields:
           row = Frame(NewWin_square)
           lab = Label(row, width=22, text=field+": ", anchor='w')
-          ent = Entry(row)
+          ent = Entry(row , justify='center')
           ent.insert(0,"0")
-          row.pack(side=TOP, fill=X, padx=5, pady=5)
-          lab.pack(side=LEFT)
+          row.pack(side=TOP, fill=X, padx=5, pady=5) # คำอธิบายหัวเรื่อง
+          lab.pack(side=TOP) # ช่องที่ให้ใส่เลข
           ent.pack(side=RIGHT, expand=YES, fill=X)
           entries[field] = ent
        return entries
@@ -286,10 +286,10 @@ def rectangle_area(): #calculate rectangle area สีเหลี่ยมผ�
        for field in fields:
           row = Frame(NewWin_rectangle)
           lab = Label(row, width=22, text=field+": ", anchor='w')
-          ent = Entry(row)
+          ent = Entry(row , justify='center')
           ent.insert(0,"0")
-          row.pack(side=TOP, fill=X, padx=5, pady=5)
-          lab.pack(side=LEFT)
+          row.pack(side=TOP, fill=X, padx=5, pady=5) # คำอธิบายหัวเรื่อง
+          lab.pack(side=TOP) # ช่องที่ให้ใส่เลข
           ent.pack(side=RIGHT, expand=YES, fill=X)
           entries[field] = ent
        return entries
@@ -320,10 +320,10 @@ def paralellogram_area(): #calculate paralellogram area สี่เหลี่
        for field in fields:
           row = Frame(NewWin_paralellogram)
           lab = Label(row, width=22, text=field+": ", anchor='w')
-          ent = Entry(row)
+          ent = Entry(row , justify='center')
           ent.insert(0,"0")
-          row.pack(side=TOP, fill=X, padx=5, pady=5)
-          lab.pack(side=LEFT)
+          row.pack(side=TOP, fill=X, padx=5, pady=5) # คำอธิบายหัวเรื่อง
+          lab.pack(side=TOP) # ช่องที่ให้ใส่เลข
           ent.pack(side=RIGHT, expand=YES, fill=X)
           entries[field] = ent
        return entries
@@ -355,10 +355,10 @@ def rhombus_area():   #calculate rhombus area สี่เหลี่ยมเ�
        for field in fields:
           row = Frame(NewWin_rhombus)
           lab = Label(row, width=22, text=field+": ", anchor='w')
-          ent = Entry(row)
+          ent = Entry(row , justify='center')
           ent.insert(0,"0")
-          row.pack(side=TOP, fill=X, padx=5, pady=5)
-          lab.pack(side=LEFT)
+          row.pack(side=TOP, fill=X, padx=5, pady=5) # คำอธิบายหัวเรื่อง
+          lab.pack(side=TOP) # ช่องที่ให้ใส่เลข
           ent.pack(side=RIGHT, expand=YES, fill=X)
           entries[field] = ent
        return entries
@@ -391,10 +391,10 @@ def trapezium_area():   #calculate trapezium area คางหมู
        for field in fields:
           row = Frame(NewWin_trapezium)
           lab = Label(row, width=22, text=field+": ", anchor='w')
-          ent = Entry(row)
+          ent = Entry(row , justify='center')
           ent.insert(0,"0")
-          row.pack(side=TOP, fill=X, padx=5, pady=5)
-          lab.pack(side=LEFT)
+          row.pack(side=TOP, fill=X, padx=5, pady=5) # คำอธิบายหัวเรื่อง
+          lab.pack(side=TOP) # ช่องที่ให้ใส่เลข
           ent.pack(side=RIGHT, expand=YES, fill=X)
           entries[field] = ent
        return entries
@@ -425,10 +425,10 @@ def kite_area():   #calculate rhombus area สี่เหลี่ยมรู�
        for field in fields:
           row = Frame(NewWin_rhombus)
           lab = Label(row, width=22, text=field+": ", anchor='w')
-          ent = Entry(row)
+          ent = Entry(row , justify='center')
           ent.insert(0,"0")
-          row.pack(side=TOP, fill=X, padx=5, pady=5)
-          lab.pack(side=LEFT)
+          row.pack(side=TOP, fill=X, padx=5, pady=5) # คำอธิบายหัวเรื่อง
+          lab.pack(side=TOP) # ช่องที่ให้ใส่เลข
           ent.pack(side=RIGHT, expand=YES, fill=X)
           entries[field] = ent
        return entries
@@ -457,10 +457,10 @@ def cube_volume():   #calculate cube_volume ปริมาตรลูกบา
        for field in fields:
           row = Frame(NewWin_trapezium)
           lab = Label(row, width=22, text=field+": ", anchor='w')
-          ent = Entry(row)
+          ent = Entry(row , justify='center')
           ent.insert(0,"0")
-          row.pack(side=TOP, fill=X, padx=5, pady=5)
-          lab.pack(side=LEFT)
+          row.pack(side=TOP, fill=X, padx=5, pady=5) # คำอธิบายหัวเรื่อง
+          lab.pack(side=TOP) # ช่องที่ให้ใส่เลข
           ent.pack(side=RIGHT, expand=YES, fill=X)
           entries[field] = ent
        return entries
@@ -533,10 +533,10 @@ def circle_area(): #calculate circle_area พื้นที่วงกลม
        for field in fields:
           row = Frame(NewWin_square)
           lab = Label(row, width=22, text=field+": ", anchor='w')
-          ent = Entry(row)
+          ent = Entry(row , justify='center')
           ent.insert(0,"0")
-          row.pack(side=TOP, fill=X, padx=5, pady=5)
-          lab.pack(side=LEFT)
+          row.pack(side=TOP, fill=X, padx=5, pady=5) # คำอธิบายหัวเรื่อง
+          lab.pack(side=TOP) # ช่องที่ให้ใส่เลข
           ent.pack(side=RIGHT, expand=YES, fill=X)
           entries[field] = ent
        return entries
@@ -568,10 +568,10 @@ def circle_surface_area(): #calculate sphere_surface_area พื้นที่�
        for field in fields:
           row = Frame(NewWin_rectangle)
           lab = Label(row, width=22, text=field+": ", anchor='w')
-          ent = Entry(row)
+          ent = Entry(row , justify='center')
           ent.insert(0,"0")
-          row.pack(side=TOP, fill=X, padx=5, pady=5)
-          lab.pack(side=LEFT)
+          row.pack(side=TOP, fill=X, padx=5, pady=5) # คำอธิบายหัวเรื่อง
+          lab.pack(side=TOP) # ช่องที่ให้ใส่เลข
           ent.pack(side=RIGHT, expand=YES, fill=X)
           entries[field] = ent
        return entries
@@ -610,10 +610,10 @@ def cylinder_surface_area():#calculate cylinder_surfaceside_area  พื้น�
        for field in fields:
           row = Frame(NewWin_paralellogram)
           lab = Label(row, width=22, text=field+": ", anchor='w')
-          ent = Entry(row)
+          ent = Entry(row , justify='center')
           ent.insert(0,"0")
-          row.pack(side=TOP, fill=X, padx=5, pady=5)
-          lab.pack(side=LEFT)
+          row.pack(side=TOP, fill=X, padx=5, pady=5) # คำอธิบายหัวเรื่อง
+          lab.pack(side=TOP) # ช่องที่ให้ใส่เลข
           ent.pack(side=RIGHT, expand=YES, fill=X)
           entries[field] = ent
        return entries
@@ -655,10 +655,10 @@ def cone_surface_area():#calculate cylinder_surfaceside_area  พื้นที
        for field in fields:
           row = Frame(NewWin_paralellogram)
           lab = Label(row, width=22, text=field+": ", anchor='w')
-          ent = Entry(row)
+          ent = Entry(row , justify='center')
           ent.insert(0,"0")
-          row.pack(side=TOP, fill=X, padx=5, pady=5)
-          lab.pack(side=LEFT)
+          row.pack(side=TOP, fill=X, padx=5, pady=5) # คำอธิบายหัวเรื่อง
+          lab.pack(side=TOP) # ช่องที่ให้ใส่เลข
           ent.pack(side=RIGHT, expand=YES, fill=X)
           entries[field] = ent
        return entries
@@ -706,10 +706,10 @@ def sphere_volume():#calculate sphere_volume ปริมาตรทรงก�
        for field in fields:
           row = Frame(NewWin_paralellogram)
           lab = Label(row, width=22, text=field+": ", anchor='w')
-          ent = Entry(row)
+          ent = Entry(row , justify='center')
           ent.insert(0,"0")
-          row.pack(side=TOP, fill=X, padx=5, pady=5)
-          lab.pack(side=LEFT)
+          row.pack(side=TOP, fill=X, padx=5, pady=5) # คำอธิบายหัวเรื่อง
+          lab.pack(side=TOP) # ช่องที่ให้ใส่เลข
           ent.pack(side=RIGHT, expand=YES, fill=X)
           entries[field] = ent
        return entries
@@ -726,19 +726,14 @@ def sphere_volume():#calculate sphere_volume ปริมาตรทรงก�
 
 ##หน้าต่างใหม่ที่เลือกเมนูสามเหลี่ยมจากหน้าแรก   มีเมนูให้เลือก    
 def get_new_win():
-    NewWin2 = tk.Tk()
-    NewWin2.title('Calculate Circle')
+    NewWin2 = tk.Toplevel(root)
+    NewWin2.title('Calculate Squre')
     NewWin2.geometry('800x680')
     NewWin2.iconbitmap("C:\Python27\Jommans-Mushroom-Search.ico")
-    canvas = Canvas(NewWin2 , bg="#66FFCC", width=800, height=650)
-    canvas.pack()
-##    FILENAME = 'C:\Python27\img18.gif'
-##    canvas = tk.Canvas( NewWin2, width=700, height=600)
-##    canvas.pack()
-##    tk_img = ImageTk.PhotoImage(file = FILENAME)
-##    canvas.create_image(125, 125, image=tk_img)
-    
-    B1 = Tkinter.Button(NewWin2, text = "circle_area", command = circle_area,cursor="circle",
+    canvas = Canvas(NewWin2 , bg="#99FF99", width=800, height=650)
+    canvas.pack()    
+ 
+    B1 = Tkinter.Button(NewWin2,text = "circle_area", command = circle_area,cursor="circle",
                         fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=100) # ปุ่มเรียก circle_area
     B2 = Tkinter.Button(NewWin2, text = "circle_surface_area", command = circle_surface_area,cursor="circle",
                         fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=170) # ปุ่มเรียก  circle_surface_area
