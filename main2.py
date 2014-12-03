@@ -215,18 +215,26 @@ def get_new_win():
     NewWin2.iconbitmap("C:\Python27\Jommans-Mushroom-Search.ico")
     canvas = Canvas(NewWin2 , bg="#CCFF66", width=800, height=650)
     canvas.pack()
-        
-    B1 = Tkinter.Button(NewWin2, text = "triangle_area", command = triangle_area,cursor="circle",
-                        fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=100) # ปุ่มเรียก square_area
-    B2 = Tkinter.Button(NewWin2, text = "equilateral_triangle_area", command = equilateral_triangle_area,cursor="circle",
-                         fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=170) # ปุ่มเรียก  rectangle area
-    B3 = Tkinter.Button(NewWin2, text = "rightangled_triangle_area", command = rightangled_triangle_area,cursor="circle",
-                         fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=240) # ปุ่มเรียก paralellogram area
-    B4 = Tkinter.Button(NewWin2, text = "rhombus_area", command = rhombus_area,cursor="circle",
-                         fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=300) # ปุ่มเรียก rhombus area
-    B5 = Tkinter.Button(NewWin2, text = "trapezium_area", command = trapezium_area,cursor="circle",
-                         fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=370) # ปุ่มเรียก trapezium
     
+##    img_good = PhotoImage(file="C:\Python27\Triangle.gif")    
+##    B1 = Button(NewWin2, compound=CENTER, image=img_good, command = triangle_area,cursor="circle",
+##                        fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=100) # ปุ่มเรียก square_area
+##    img_good2 = PhotoImage(file="C:\Python27\Triangle.gif")
+##    B2 = Tkinter.Button(NewWin2, text = "equilateral_triangle_area", command = equilateral_triangle_area,cursor="circle",
+##                         fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=170) # ปุ่มเรียก  rectangle area
+##    img_good2 = PhotoImage(file="C:\Python27\Triangle.gif")
+##    B3 = Tkinter.Button(NewWin2, text = "rightangled_triangle_area", command = rightangled_triangle_area,cursor="circle",
+##                         fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=240) # ปุ่มเรียก paralellogram area
+##    img_good2 = PhotoImage(file="C:\Python27\Triangle.gif")
+##    B4 = Tkinter.Button(NewWin2, text = "rhombus_area", command = rhombus_area,cursor="circle",
+##                         fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=300) # ปุ่มเรียก rhombus area
+##    img_good2 = PhotoImage(file="C:\Python27\Triangle.gif")
+##    B5 = Tkinter.Button(NewWin2, text = "trapezium_area", command = trapezium_area,cursor="circle",
+##                         fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=370) # ปุ่มเรียก trapezium
+    
+    btn2 = Button(NewWin2,bd=0, compound=CENTER, image=img_good,cursor="X_cursor", command=triangle_area).place(x=400,y=100)
+    
+img_good2 = PhotoImage(file="C:\Python27\Triangle.gif")    
 img_good = PhotoImage(file="C:\Python27\Triangle.gif")
 btn = Button(root,bd=0, compound=CENTER, image=img_good,cursor="X_cursor", command=get_new_win).place(x=82,y=500)
 ##-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------##
