@@ -20,7 +20,7 @@ frame = Frame(root)
 frame.pack()
 canvas = Canvas(frame, bg="black", width=800, height=650)
 canvas.pack()
-photoimage = ImageTk.PhotoImage(file="C:\Python27\Cartoon-landscape-vector-background2.jpg")
+photoimage = ImageTk.PhotoImage(file="C:\Python27\Project_python\Cartoon-landscape-vector-background2.jpg")
 canvas.create_image(400, 340, image=photoimage)
 ##-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------##
 
@@ -136,17 +136,17 @@ def rightangled_triangle_area(): #calculate rightangled triangle area สาม�
        b2 = Button(NewWin_paralellogram, text='Area',command=(lambda e=ents: area(e)))
        b2.pack(side=LEFT, padx=5, pady=5)
 
-def rhombus_area():   #calculate rhombus area สี่เหลี่ยมเปียกปูน
+def Isosceles_area():   #calculate Isosceles Triangles area สามเหลี่ยมหน้าจั่ว
     NewWin_rhombus = tk.Toplevel(root)
     NewWin_rhombus.title('Rhombus_area')
     NewWin_rhombus.geometry('800x680')
-    fields = ('diagonal1','diagonal2','area')
+    fields = ('leg1','leg2','base','area')
 
     def area(entries):
-       diagonal1 = float(entries['diagonal1'].get())
-       diagonal2 = float(entries['diagonal2'].get())
-       p_diagonal = diagonal1*diagonal2
-       area = (1.0/2.0)*p_diagonal
+       leg1 = float(entries['leg1'].get())
+       leg2 = float(entries['leg1'].get())
+       base = float(entries['base'].get())
+       area = (base/4.0)*sqrt((4.0*leg2**2) - (leg1**2))
        area = ("%.2f" % area).strip()
        entries['area'].insert(0, area )
        print("area:" ,area)
@@ -171,40 +171,6 @@ def rhombus_area():   #calculate rhombus area สี่เหลี่ยมเ�
        b2.pack(side=LEFT, padx=5, pady=5)
 
 
-def trapezium_area():   #calculate trapezium area คางหมู
-    NewWin_trapezium = tk.Toplevel(root)
-    NewWin_trapezium.title('Trapezium_area')
-    NewWin_trapezium.geometry('800x680')
-    fields = ('diagonal',' branch1', 'branch2','area')
-    
-    def area(entries):
-       diagonal = float(entries['diagonal'].get())
-       branch1 = float(entries['branch1'].get())
-       branch2 = float(entries['branch2'].get())
-       sum_branch = branch1+branch2
-       area = (1.0/2.0)*diagonal*sum_branch
-       area = ("%.2f" % area).strip()
-       entries['area'].insert(0, area )
-       print("area:" ,area)
-
-    def makeform(NewWin_trapezium, fields):
-       entries = {}
-       for field in fields:
-          row = Frame(NewWin_trapezium)
-          lab = Label(row, width=22, text=field+": ", anchor='w')
-          ent = Entry(row , justify='center')
-          ent.insert(0,"0")
-          row.pack(side=TOP, fill=X, padx=5, pady=5) # คำอธิบายหัวเรื่อง
-          lab.pack(side=TOP) # ช่องที่ให้ใส่เลข
-          ent.pack(side=RIGHT, expand=YES, fill=X)
-          entries[field] = ent
-       return entries
-
-    if __name__ == '__main__':
-       ents = makeform(NewWin_trapezium, fields)
-       NewWin_trapezium.bind('<Return>', (lambda event, e=ents: fetch(e)))   
-       b2 = Button(NewWin_trapezium, text='Area',command=(lambda e=ents: area(e)))
-       b2.pack(side=LEFT, padx=5, pady=5)       
 
 
 ##หน้าต่างใหม่ที่เลือกเมนูสามเหลี่ยมจากหน้าแรก   มีเมนูให้เลือก    
@@ -213,28 +179,30 @@ def get_new_win():
     NewWin2.title('Calculate Triangle')
     NewWin2.geometry('800x680')
     NewWin2.iconbitmap("C:\Python27\Jommans-Mushroom-Search.ico")
-    canvas = Canvas(NewWin2 , bg="#CCFF66", width=800, height=650)
+    canvas = Canvas(NewWin2 , bg="#EEEEEE", width=800, height=650)
     canvas.pack()
     
-##    img_good = PhotoImage(file="C:\Python27\Triangle.gif")    
-##    B1 = Button(NewWin2, compound=CENTER, image=img_good, command = triangle_area,cursor="circle",
-##                        fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=100) # ปุ่มเรียก square_area
-##    img_good2 = PhotoImage(file="C:\Python27\Triangle.gif")
-##    B2 = Tkinter.Button(NewWin2, text = "equilateral_triangle_area", command = equilateral_triangle_area,cursor="circle",
-##                         fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=170) # ปุ่มเรียก  rectangle area
-##    img_good2 = PhotoImage(file="C:\Python27\Triangle.gif")
-##    B3 = Tkinter.Button(NewWin2, text = "rightangled_triangle_area", command = rightangled_triangle_area,cursor="circle",
-##                         fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=240) # ปุ่มเรียก paralellogram area
-##    img_good2 = PhotoImage(file="C:\Python27\Triangle.gif")
-##    B4 = Tkinter.Button(NewWin2, text = "rhombus_area", command = rhombus_area,cursor="circle",
-##                         fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=300) # ปุ่มเรียก rhombus area
-##    img_good2 = PhotoImage(file="C:\Python27\Triangle.gif")
-##    B5 = Tkinter.Button(NewWin2, text = "trapezium_area", command = trapezium_area,cursor="circle",
-##                         fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=370) # ปุ่มเรียก trapezium
-    
-    btn2 = Button(NewWin2,bd=0, compound=CENTER, image=img_good,cursor="X_cursor", command=triangle_area).place(x=400,y=100)
-    
-img_good2 = PhotoImage(file="C:\Python27\Triangle.gif")    
+    #ปุ่มเลือกชนิดสามเหลี่ยม
+    btn1 = Button(NewWin2,bd=0, compound=CENTER, image=img_b1,cursor="X_cursor",
+                  command=triangle_area).place(x=180,y=130) #ปุ่มเรียก triangle_area
+    btn2 = Button(NewWin2,bd=0, compound=CENTER, image=img_b2,cursor="X_cursor",
+                  command=equilateral_triangle_area).place(x=420,y=130) #ปุ่มเรียก equilateral_triangle_area
+    btn3 = Button(NewWin2,bd=0, compound=CENTER, image=img_b3,cursor="X_cursor",
+                  command=rightangled_triangle_area).place(x=160,y=330)#ปุ่มเรียก rightangled_triangle_area
+    btn4 = Button(NewWin2,bd=0, compound=CENTER, image=img_b4,cursor="X_cursor",
+                  command=Isosceles_area).place(x=440,y=330)#ปุ่มเรียก Isosceles_area
+    btn5 = Button(NewWin2,bd=0,compound=CENTER, image=img_bg,cursor="X_cursor").place(x=75,y=540)
+    btn6 = Button(NewWin2,bd=0, compound=CENTER, image=img_bg2,cursor="X_cursor").place(x=185,y=10)
+
+
+# ไฟล์รูปปุ่ม    
+img_b1 = PhotoImage(file="C:\Python27\Project_python\Triangle_1.gif")
+img_b2 = PhotoImage(file="C:\Python27\Project_python\Triangle_2.gif")
+img_b3 = PhotoImage(file="C:\Python27\Project_python\Triangle_3.gif")
+img_b4 = PhotoImage(file="C:\Python27\Project_python\Triangle_4.gif")
+img_bg = PhotoImage(file="C:\Python27\Project_python\line1.gif")
+img_bg2 = PhotoImage(file="C:\Python27\Project_python\menu_tri.gif")
+
 img_good = PhotoImage(file="C:\Python27\Triangle.gif")
 btn = Button(root,bd=0, compound=CENTER, image=img_good,cursor="X_cursor", command=get_new_win).place(x=82,y=500)
 ##-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------##
@@ -757,3 +725,4 @@ btn3 = Button(root,bd=0, compound=CENTER, image=img_good3,cursor="X_cursor", com
 ##-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------##
 
 root.mainloop()
+
