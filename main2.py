@@ -10,9 +10,9 @@ import Tkinter as tk
 
 #cursor
 root = Tkinter.Tk()
-root.geometry('800x680+10+6')
+root.geometry('800x680+235+8')
 root.title("My Window")
-root.iconbitmap("C:\Python27\Jommans-Mushroom-Search.ico")
+root.iconbitmap("C:\Python27\\Project_python\Home.ico")
 ##-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------##
 
 ##Bg back
@@ -39,7 +39,8 @@ btn_exit = Button(root,bd=0, compound=CENTER, image=img_exit,cursor="X_cursor", 
 def triangle_area(): #calculate triangle area พื้นที่สามเหลี่ยม
     NewWin_square = tk.Toplevel(root)
     NewWin_square.title('Triangle_area')
-    NewWin_square.geometry('800x680')
+    NewWin_square.geometry('800x680+235+8')
+    NewWin_square.iconbitmap("C:\Python27\Project_python\Chicho.ico")
     fields = ('base', 'height','area')
     
     def area(entries):
@@ -66,14 +67,15 @@ def triangle_area(): #calculate triangle area พื้นที่สามเ�
     if __name__ == '__main__':
        ents = makeform(NewWin_square, fields)
        NewWin_square.bind('<Return>', (lambda event, e=ents: fetch(e)))   
-       b2 = Button(NewWin_square, text='Area',command=(lambda e=ents: area(e)))
-       b2.pack(side=LEFT, padx=5, pady=5)
+       b2 = Button(NewWin_square, text='Area',fg="white",bg="#FF9900",font=("Helvetica", 16),command=(lambda e=ents: area(e))).place(x=360,y=180)
+       
+       
 
 
 def equilateral_triangle_area(): #calculate equilateral triangle area สามเหลี่ยมด้านเท่า
     NewWin_rectangle = tk.Toplevel(root)
     NewWin_rectangle.title('Equilateral_triangle_area')
-    NewWin_rectangle.geometry('800x680')
+    NewWin_rectangle.geometry('800x680+235+8')
     fields = ('side','area')
     
     def area(entries):
@@ -106,7 +108,7 @@ def equilateral_triangle_area(): #calculate equilateral triangle area สาม�
 def rightangled_triangle_area(): #calculate rightangled triangle area สามเหลี่ยมมุมฉาก    
     NewWin_paralellogram = tk.Toplevel(root)
     NewWin_paralellogram.title('Rightangled_triangle_area')
-    NewWin_paralellogram.geometry('800x680')
+    NewWin_paralellogram.geometry('800x680+235+8')
     fields = ('cathetus1','cathetus2','area')
     
     def area(entries):
@@ -138,8 +140,8 @@ def rightangled_triangle_area(): #calculate rightangled triangle area สาม�
 
 def Isosceles_area():   #calculate Isosceles Triangles area สามเหลี่ยมหน้าจั่ว
     NewWin_rhombus = tk.Toplevel(root)
-    NewWin_rhombus.title('Rhombus_area')
-    NewWin_rhombus.geometry('800x680')
+    NewWin_rhombus.title('Isosceles_area')
+    NewWin_rhombus.geometry('800x680+235+8')
     fields = ('leg1','leg2','base','area')
 
     def area(entries):
@@ -177,22 +179,22 @@ def Isosceles_area():   #calculate Isosceles Triangles area สามเหล�
 def get_new_win():
     NewWin2 = tk.Toplevel(root)
     NewWin2.title('Calculate Triangle')
-    NewWin2.geometry('800x680')
+    NewWin2.geometry('800x680+235+8')
     NewWin2.iconbitmap("C:\Python27\Jommans-Mushroom-Search.ico")
     canvas = Canvas(NewWin2 , bg="#EEEEEE", width=800, height=650)
     canvas.pack()
     
     #ปุ่มเลือกชนิดสามเหลี่ยม
-    btn1 = Button(NewWin2,bd=0, compound=CENTER, image=img_b1,cursor="X_cursor",
+    btn1 = Button(NewWin2,bd=0, compound=CENTER, image=img_b1,cursor="circle",
                   command=triangle_area).place(x=180,y=130) #ปุ่มเรียก triangle_area
-    btn2 = Button(NewWin2,bd=0, compound=CENTER, image=img_b2,cursor="X_cursor",
+    btn2 = Button(NewWin2,bd=0, compound=CENTER, image=img_b2,cursor="circle",
                   command=equilateral_triangle_area).place(x=420,y=130) #ปุ่มเรียก equilateral_triangle_area
-    btn3 = Button(NewWin2,bd=0, compound=CENTER, image=img_b3,cursor="X_cursor",
+    btn3 = Button(NewWin2,bd=0, compound=CENTER, image=img_b3,cursor="circle",
                   command=rightangled_triangle_area).place(x=160,y=330)#ปุ่มเรียก rightangled_triangle_area
-    btn4 = Button(NewWin2,bd=0, compound=CENTER, image=img_b4,cursor="X_cursor",
+    btn4 = Button(NewWin2,bd=0, compound=CENTER, image=img_b4,cursor="circle",
                   command=Isosceles_area).place(x=440,y=330)#ปุ่มเรียก Isosceles_area
-    btn5 = Button(NewWin2,bd=0,compound=CENTER, image=img_bg,cursor="X_cursor").place(x=75,y=540)
-    btn6 = Button(NewWin2,bd=0, compound=CENTER, image=img_bg2,cursor="X_cursor").place(x=185,y=10)
+    btn5 = Button(NewWin2,bd=0,compound=CENTER, image=img_bg).place(x=75,y=540)
+    btn6 = Button(NewWin2,bd=0, compound=CENTER, image=img_bg2).place(x=185,y=10)
 
 
 # ไฟล์รูปปุ่ม    
@@ -276,8 +278,7 @@ def rectangle_area(): #calculate rectangle area สีเหลี่ยมผ�
        b2 = Button(NewWin_rectangle, text='Area',command=(lambda e=ents: area(e)))
        b2.pack(side=LEFT, padx=5, pady=5)
 
-def paralellogram_area(): #calculate paralellogram area สี่เหลี่ยมด้านขนาน
-    
+def parallelogram_area(): #calculate paralellogram area สี่เหลี่ยมด้านขนาน
     NewWin_paralellogram = tk.Toplevel(root)
     NewWin_paralellogram.title('Paralellogram_area')
     NewWin_paralellogram.geometry('800x680')
@@ -451,25 +452,43 @@ def cube_volume():   #calculate cube_volume ปริมาตรลูกบา
 def get_new_win():
     NewWin2 = tk.Toplevel(root)
     NewWin2.title('Calculate Squre')
-    NewWin2.geometry('800x680')
+    NewWin2.geometry('800x680+235+8')
     NewWin2.iconbitmap("C:\Python27\Jommans-Mushroom-Search.ico")
-    canvas = Canvas(NewWin2 , bg="#99FF99", width=800, height=650)
+    canvas = Canvas(NewWin2 , bg="#EEEEEE", width=800, height=650)
     canvas.pack()
     
-    B1 = Tkinter.Button(NewWin2, text = "square_area", command = square_area,cursor="circle",
-                         fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=100) # ปุ่มเรียก square_area
-    B2 = Tkinter.Button(NewWin2, text = "rectangle_area", command = rectangle_area,cursor="circle",
-                         fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=170) # ปุ่มเรียก  rectangle area
-    B3 = Tkinter.Button(NewWin2, text = "sparalellogram_area", command = paralellogram_area,cursor="circle",
-                         fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=240) # ปุ่มเรียก paralellogram area
-    B4 = Tkinter.Button(NewWin2, text = "rhombus_area", command = rhombus_area,cursor="circle",
-                         fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=300) # ปุ่มเรียก rhombus area
-    B5 = Tkinter.Button(NewWin2, text = "trapezium_area", command = trapezium_area,cursor="circle",
-                         fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=370) # ปุ่มเรียก trapezium
-    B6 = Tkinter.Button(NewWin2, text = "kite_area", command = kite_area,cursor="circle",
-                         fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=440) # ปุ่มเรียก trapezium
-    B7 = Tkinter.Button(NewWin2, text = "cube_volume", command = cube_volume,cursor="circle",
-                         fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=500) # ปุ่มเรียก cube_volume
+#ปุ่มเลือกชนิดสามเหลี่ยม
+    btn1 = Button(NewWin2,bd=0, compound=CENTER, image=img_t1,cursor="circle",
+                  command=square_area).place(x=20,y=130) #ปุ่มเรียก triangle_area
+    btn2 = Button(NewWin2,bd=0, compound=CENTER, image=img_t2,cursor="circle",
+                  command=rectangle_area).place(x=215,y=130) #ปุ่มเรียก equilateral_triangle_area
+    btn3 = Button(NewWin2,bd=0, compound=CENTER, image=img_t3,cursor="circle",
+                  command=parallelogram_area).place(x=408,y=130)#ปุ่มเรียก rightangled_triangle_area
+    btn4 = Button(NewWin2,bd=0, compound=CENTER, image=img_t4,cursor="circle",
+                  command=rhombus_area).place(x=600,y=130)#ปุ่มเรียก Isosceles_area
+    btn5 = Button(NewWin2,bd=0, compound=CENTER, image=img_t5,cursor="circle",
+                  command=trapezium_area).place(x=20,y=330) #ปุ่มเรียก triangle_area
+    btn6 = Button(NewWin2,bd=0, compound=CENTER, image=img_t6,cursor="circle",
+                  command=kite_area).place(x=215,y=330) #ปุ่มเรียก equilateral_triangle_area
+    btn7 = Button(NewWin2,bd=0, compound=CENTER, image=img_t7,cursor="circle",
+                  command=cube_volume).place(x=408,y=330)#ปุ่มเรียก rightangled_triangle_area
+    btn8 = Button(NewWin2,bd=0, compound=CENTER, image=img_t8,cursor="circle",
+                  command=cube_volume).place(x=600,y=330)#ปุ่มเรียก Isosceles_area
+    
+    btn5 = Button(NewWin2,bd=0,compound=CENTER, image=img_bg).place(x=75,y=540)
+    btn6 = Button(NewWin2,bd=0, compound=CENTER, image=img_tg2).place(x=195,y=10)
+
+# ไฟล์รูปปุ่ม    
+img_t1 = PhotoImage(file="C:\Python27\Project_python\Square_1.gif")
+img_t2 = PhotoImage(file="C:\Python27\Project_python\Square_2.gif")
+img_t3 = PhotoImage(file="C:\Python27\Project_python\Square_3.gif")
+img_t4 = PhotoImage(file="C:\Python27\Project_python\Square_4.gif")
+img_t5 = PhotoImage(file="C:\Python27\Project_python\Square_5.gif")
+img_t6 = PhotoImage(file="C:\Python27\Project_python\Square_6.gif")
+img_t7 = PhotoImage(file="C:\Python27\Project_python\Volume-cuboid.gif")
+img_t8 = PhotoImage(file="C:\Python27\Project_python\Volume-cube.gif")
+img_tg = PhotoImage(file="C:\Python27\Project_python\line1.gif")
+img_tg2 = PhotoImage(file="C:\Python27\Project_python\menu_squ.gif")
     
 img_good2 = PhotoImage(file="C:\Python27\Square.gif")
 btn2 = Button(root,bd=0, compound=CENTER, image=img_good2,cursor="X_cursor", command=get_new_win).place(x=310,y=500)
@@ -703,26 +722,41 @@ def sphere_volume():#calculate sphere_volume ปริมาตรทรงก�
 ##หน้าต่างใหม่ที่เลือกเมนูสามเหลี่ยมจากหน้าแรก   มีเมนูให้เลือก    
 def get_new_win():
     NewWin2 = tk.Toplevel(root)
-    NewWin2.title('Calculate Squre')
-    NewWin2.geometry('800x680')
+    NewWin2.title('Calculate Circle')
+    NewWin2.geometry('800x680+235+8')
     NewWin2.iconbitmap("C:\Python27\Jommans-Mushroom-Search.ico")
-    canvas = Canvas(NewWin2 , bg="#99FF99", width=800, height=650)
-    canvas.pack()    
- 
-    B1 = Tkinter.Button(NewWin2,text = "circle_area", command = circle_area,cursor="circle",
-                        fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=100) # ปุ่มเรียก circle_area
-    B2 = Tkinter.Button(NewWin2, text = "circle_surface_area", command = circle_surface_area,cursor="circle",
-                        fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=170) # ปุ่มเรียก  circle_surface_area
-    B3 = Tkinter.Button(NewWin2, text = "cylinder_surface_area", command = cylinder_surface_area,cursor="circle",
-                        fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=240) # ปุ่มเรียก cylinder_surface_area
-    B4 = Tkinter.Button(NewWin2, text = "cone_surface_area", command = cone_surface_area,cursor="circle",
-                        fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=310) # ปุ่มเรียก cone_surface_area
-    B5 = Tkinter.Button(NewWin2, text = "sphere_volume", command = sphere_volume,cursor="circle",
-                        fg="white",bg="#00CC99",font=("Helvetica", 16)).place(x=400,y=360) # ปุ่มเรียก sphere_volume 
+    canvas = Canvas(NewWin2 , bg="#EEEEEE", width=800, height=650)
+    canvas.pack()
+
+#ปุ่มเลือกชนิดสามเหลี่ยม
+    btn1 = Button(NewWin2,bd=0, compound=CENTER, image=img_c1,cursor="circle",
+                  command=circle_area).place(x=20,y=140) #ปุ่มเรียก circle_area
+    btn2 = Button(NewWin2,bd=0, compound=CENTER, image=img_c2,cursor="circle",
+                  command=circle_surface_area).place(x=215,y=140) #ปุ่มเรียก circle_surface_area
+    btn3 = Button(NewWin2,bd=0, compound=CENTER, image=img_c3,cursor="circle",
+                  command=cylinder_surface_area).place(x=408,y=140)#ปุ่มเรียก cylinder_surface_area
+    btn4 = Button(NewWin2,bd=0, compound=CENTER, image=img_c4,cursor="circle",
+                  command=cone_surface_area).place(x=600,y=140)#ปุ่มเรียก cone_surface_area
+    btn5 = Button(NewWin2,bd=0, compound=CENTER, image=img_c5,cursor="circle",
+                  command=sphere_volume).place(x=200,y=350) #ปุ่มเรียก sphere_volume
+    
+    
+    btn5 = Button(NewWin2,bd=0,compound=CENTER, image=img_bg).place(x=75,y=540)
+    btn6 = Button(NewWin2,bd=0, compound=CENTER, image=img_cg2).place(x=240,y=10)
+
+# ไฟล์รูปปุ่ม    
+img_c1 = PhotoImage(file="C:\Python27\Project_python\Circle_1.gif")
+img_c2 = PhotoImage(file="C:\Python27\Project_python\Circle_2.gif")
+img_c3 = PhotoImage(file="C:\Python27\Project_python\Circle_3.gif")
+img_c4 = PhotoImage(file="C:\Python27\Project_python\Circle_4.gif")
+img_c5 = PhotoImage(file="C:\Python27\Project_python\Circle_5.gif")
+
+img_cg = PhotoImage(file="C:\Python27\Project_python\line1.gif")
+img_cg2 = PhotoImage(file="C:\Python27\Project_python\menu_cri.gif")
+
     
 img_good3 = PhotoImage(file="C:\Python27\Circle.gif")
 btn3 = Button(root,bd=0, compound=CENTER, image=img_good3,cursor="X_cursor", command=get_new_win).place(x=551,y=500)
 ##-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------##
 
 root.mainloop()
-
