@@ -23,16 +23,16 @@ def quitprogram():
     """quit program button"""
     if tkMessageBox.askyesno("Quit", "You want to quit now?"):
         root.destroy()
-        img_exit = PhotoImage(file = "action_exit.gif")
-        btn_exit = Button(root, bd = 0, compound = CENTER, image = img_exit, cursor = "X_cursor", command = quitprogram).place(x = 745, y = 2)
+img_exit = PhotoImage(file = "action_exit.gif")
+btn_exit = Button(root, bd = 0, compound = CENTER, image = img_exit, cursor = "X_cursor", command = quitprogram).place(x = 745, y = 2)
 
 #The calculation of triangles
 def triangle_area():
     """the area of triangle"""
-    NewWin_square = tk.Toplevel(root)
-    NewWin_square.title('Triangle_area')
-    NewWin_square.geometry('800x680+235+8')
-    NewWin_square.iconbitmap("Femfoyou.ico")
+    NewWin_triangle = tk.Toplevel(root)
+    NewWin_triangle.title('Triangle_area')
+    NewWin_triangle.geometry('800x680+235+8')
+    NewWin_triangle.iconbitmap("Femfoyou.ico")
     fields = ('Base', 'Height', 'Area')
     def area(entries):
         base = float(entries['Base'].get())
@@ -41,10 +41,10 @@ def triangle_area():
         area = ("%.2f" % area).strip()
         entries['Area'].delete(0,END)
         entries['Area'].insert(0, area )
-    def makeform(NewWin_square, fields):
+    def makeform(NewWin_triangle, fields):
         entries = {}
         for field in fields:
-            row = Frame(NewWin_square, width = 140, height = 50)
+            row = Frame(NewWin_triangle, width = 140, height = 50)
             lab = Label(row, width = 22, font = ("Helvetica", 13), fg = "#FF4500", text = field + " : ", anchor = 'w')
             row.pack_propagate(0)
             ent = Entry(row, justify = 'center', font = 14)
@@ -55,17 +55,17 @@ def triangle_area():
             entries[field] = ent
         return entries
     if __name__ == '__main__':
-        ents = makeform(NewWin_square, fields)
-        NewWin_square.bind('<Return>', (lambda event, e = ents: fetch(e)))
-        b2 = Button(NewWin_square, text = 'Area',fg = "white", bg = "#FF9900", font = ("Helvetica", 16),
+        ents = makeform(NewWin_, fields)
+        NewWin_triangle.bind('<Return>', (lambda event, e = ents: fetch(e)))
+        b2 = Button(NewWin_triangle, text = 'Area',fg = "white", bg = "#FF9900", font = ("Helvetica", 16),
                     command = (lambda e = ents: area(e))).place(x = 360, y = 200)
              
 def equilateral_triangle_area():
     """the area of equilateral triangle"""
-    NewWin_rectangle = tk.Toplevel(root)
-    NewWin_rectangle.title('Equilateral_triangle_area')
-    NewWin_rectangle.geometry('800x680+235+8')
-    NewWin_rectangle.iconbitmap("Femfoyou.ico")
+    NewWin_equilateral = tk.Toplevel(root)
+    NewWin_equilateral.title('Equilateral_triangle_area')
+    NewWin_equilateral.geometry('800x680+235+8')
+    NewWin_equilateral.iconbitmap("Femfoyou.ico")
     fields = ('Side', 'Area')
     def area(entries):
         side = float(entries['Side'].get())
@@ -73,10 +73,10 @@ def equilateral_triangle_area():
         area = ("%.2f" % area).strip()
         entries['Area'].delete(0,END)
         entries['Area'].insert(0, area)
-    def makeform(NewWin_rectangle, fields):
+    def makeform(NewWin_equilateral, fields):
         entries = {}
         for field in fields:
-            row = Frame(NewWin_rectangle, width = 140, height = 50)
+            row = Frame(NewWin_equilateral, width = 140, height = 50)
             lab = Label(row, width = 22, font = ("Helvetica", 13), fg = "#FF4500", text = field + " : ", anchor = 'w')
             row.pack_propagate(0) 
             ent = Entry(row, justify = 'center', font = 14)
@@ -87,9 +87,9 @@ def equilateral_triangle_area():
             entries[field] = ent
         return entries
     if __name__ == '__main__':
-        ents = makeform(NewWin_rectangle, fields)
-        NewWin_rectangle.bind('<Return>', (lambda event, e = ents: fetch(e)))
-        b2 = Button(NewWin_rectangle , text = 'Area', fg = "white", bg = "#FF9900", font = ("Helvetica", 16),
+        ents = makeform(NewWin_equilateral, fields)
+        NewWin_equilateral.bind('<Return>', (lambda event, e = ents: fetch(e)))
+        b2 = Button(NewWin_equilateral, text = 'Area', fg = "white", bg = "#FF9900", font = ("Helvetica", 16),
                     command = (lambda e = ents: area(e))).place(x = 360, y = 160)
 
 def rightangled_triangle_area():
