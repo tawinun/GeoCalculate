@@ -1,10 +1,10 @@
 GeoCalculate
 ============
-โปรแกรมคำนวณหาพื้นที่ ปริมาตรจากเรขาคณิตรูปแบบต่างๆ
+The program calculates the volume of geometric style.
 
-วิธีการใช้งานโปรแกรม
+How to use program.
 -----------------
-เมื่อเปิดโปรแกรมขึ้นมาก็จะมีปุ่มให้เลือกเช่น สามเหลี่ยม สี่เหลี่ยม วงกลม
-จากนั้นเมื่อกดเรียบร้อยแล้ว ก็จะมีให้เลือกต่อว่าจะคำนวณสามเหลี่ยม สี่เหลี่ยมหรือวงกลมแบบใด
-เมื่อเลือกเสร็จก็ทำการกรอกข้อมูลเช่น ความสูง ฐาน ความกว้าง ความยาว เป็นต้น
-โปรแกรมก็จะทำการคำนวณหาค่าออกมา
+1.Open program.
+2.Select triangle or square or circle.
+3.Fill data such as height , base, width and length.
+4.The program will calculate and show the answer.
